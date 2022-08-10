@@ -14,9 +14,9 @@ function insert(string $entidade, array $dados) : string
     return $instrucao;
 }
 
-function uptade(string $entidade, array $dados, array $criterio = []) : string
+function update(string $entidade, array $dados, array $criterio = []) : string
 {
-   $instrucao = "UPTADE {$entidade} ";
+   $instrucao = "UPDATE {$entidade} ";
 
    foreach($dados as $campo => $dado){
     $set[] = "{$campo} = {$dado}";
@@ -35,14 +35,14 @@ function uptade(string $entidade, array $dados, array $criterio = []) : string
   return $instrucao;
 }
 
-function delete(string $entidade, array $criterio = [] ): string
+function delete(string $entidade, array $criterio = [] ) : string
 {
   $instrucao = "DELETE  {$entidade}";
 
-  if(!empty($criterio)){
+  if(!empty($criterio)) {
     $instrucao .= ' WHERE ';
 
-    foreach($criterio as $expressao){
+    foreach($criterio as $expressao) {
         $instrucao .= ' ' . implode(' ', $expressao);
     }
   }
