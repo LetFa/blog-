@@ -26,7 +26,7 @@ $instrucao = insert($entidade, $dados);
 echo $instrucao. '<br>';
 
 //teste geração UPDATE
-$instrucao =  uptade($entidade, $dados, $criterio);
+$instrucao =  update($entidade, $dados, $criterio);
 echo $instrucao. '<br>';
 
 //teste geração SELECT

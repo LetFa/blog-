@@ -63,7 +63,7 @@ function atualiza(string $entidade, array $dados, array $criterio = []) : bool
 }
 
   $instrucao = update($entidade, $coringa_dados, $coringa_criterio);
-  echo $instrucao;
+  
   $conexao = conecta();
 
   $stmt = mysqli_prepare($conexao, $instrucao);
@@ -75,7 +75,6 @@ function atualiza(string $entidade, array $dados, array $criterio = []) : bool
     $comando .= ', $' . implode(', $', array_keys($dados));
     $comando .= ', $' . implode(', $', $campos_criterio);
     $comando .= ');';
-    echo $comando;
     eval($comando);
 
   }
@@ -174,7 +173,7 @@ function buscar(string $entidade, array $campos = ['*'], array $criterio = [], s
   if(isset($tipo)) {
     $comando = 'mysqli_stmt_bind_param($stmt,';
     $comando .= "'" . implode(' ', $tipo). "'";
-    $comando .= ', $' . implode(', $', $campos_criterio);
+    $comando .= ', $' . implode(', $', $campo_criterio);
     $comando .= ');';
 
     eval($comando);
@@ -189,7 +188,7 @@ function buscar(string $entidade, array $campos = ['*'], array $criterio = [], s
   }
    
   $_SESSION['errors'] = mysqli_stmt_error_list($stmt);
-
+ 
   mysqli_stmt_close($stmt);
 
   desconecta ($conexao);
