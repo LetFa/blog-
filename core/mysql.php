@@ -165,16 +165,18 @@ function buscar(string $entidade, array $campos = ['*'], array $criterio = [], s
   
 
   $instrucao = select($entidade, $campos, $coringa_criterio, $ordem);
-
+ 
   $conexao = conecta();
 
   $stmt = mysqli_prepare($conexao, $instrucao);
 
   if(isset($tipo)) {
     $comando = 'mysqli_stmt_bind_param($stmt,';
-    $comando .= "'" . implode(' ', $tipo). "'";
+    $comando .= "'" . implode('', $tipo). "'";
     $comando .= ', $' . implode(', $', $campo_criterio);
     $comando .= ');';
+
+   
 
     eval($comando);
   }

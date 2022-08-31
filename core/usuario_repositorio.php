@@ -56,7 +56,7 @@ switch($acao){
         
                  $retorno = buscar (
                     'usuario',
-                    ['id', 'nome', 'email', 'senha', 'adm'],
+                    ['id','nome','email','senha','adm'],
                     $criterio
                  );
 
