@@ -59,7 +59,7 @@
              </div>
              <?php endif; ?>
              <div class="text-right">
-                <button class="btn bnt-dark" type="submit">Salvar</button>
+                <button class="btn btn-danger" type="submit">Salvar</button>
              </div>
            </form>
            </div>

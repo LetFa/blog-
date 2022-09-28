@@ -92,7 +92,7 @@
                         </div>
                     </div>
                     <div class="text-right">
-                        <button class="btn btn-success"
+                        <button class="btn btn-dark"
                                  type="submit">Salvar</button>
                     </div>
                 </form>
