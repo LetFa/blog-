@@ -30,7 +30,7 @@
                         <input class="form-control" type="password" require="required" id="senha" name="senha">
                     </div>
                     <div class="text-right">
-                        <button class="btn btn-dark" type="submit">Acessar</button>
+                        <button class="btn btn-danger" type="submit">Acessar</button>
                     </div>
                 </form>
              </div>

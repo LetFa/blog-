@@ -62,10 +62,11 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
+                   
+                    <button class="btn btn-danger mt-3 " style="margin-left:30px;margin-bottom:20px;text-decoration:none;" ><a href="index.php">Voltar</a></button>
                     <?php 
                         include 'includes/rodape.php';
                     ?>
-                    <button class="btn btn-dark mt-3"><a href="index.php">Voltar</a></button>
                 </div>
             </div>
         </div>
