@@ -1,3 +1,6 @@
+create database blog;
+use blog;
+
 CREATE TABLE usuario (
    id int NOT NULL AUTO_INCREMENT,
    nome varchar(50) NOT NULL,
@@ -5,7 +8,7 @@ CREATE TABLE usuario (
    senha varchar(60) NOT NULL,
    data_criacao datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
    ativo tinyint NOT NULL DEFAULT '0',
-   adm  tinyint NOT NULL DEFAULT '0'
+   adm  tinyint NOT NULL DEFAULT '0',
    PRIMARY KEY (id)  
 );
 
